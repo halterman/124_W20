@@ -1,6 +1,7 @@
+// Converting number to text expressing the logic in a more accurate way
 import java.util.Scanner;
 
-public class NumberInRange {
+public class NumberToText {
 
     public static void main(String[] args) {
         System.out.print("Please enter an integer in the range 1...5: ");
