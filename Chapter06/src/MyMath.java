@@ -8,5 +8,13 @@ public class MyMath {
 		}
 		return r;
 	}
+	
+	public static int minimum(int m, int n) {
+		if (m < n) {
+			return m;
+		} else {
+			return n;
+		}
+	}
 
 }
