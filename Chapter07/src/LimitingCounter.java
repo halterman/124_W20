@@ -42,6 +42,9 @@ public class LimitingCounter {
 		count = 0;
 	}
 	
+	/**
+	 * Returns a string representation for this counter
+	 */
 	public String toString() {
 		return Integer.toString(count);
 	}

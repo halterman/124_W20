@@ -6,7 +6,7 @@ public class NumberStats {
 	 * @param a the array to process
 	 * @param count a {@code Counter} object that handles the counting
 	 */
-	private static void talleyEvens(int[] a, Counter count) {
+	private static void tallyEvens(int[] a, Counter count) {
 		for (int elem : a) {
 			if (elem % 2 == 0) {
 				count.increment();
@@ -20,7 +20,7 @@ public class NumberStats {
 	 * @param a the array to process
 	 * @param count a {@code Counter} object that handles the counting
 	 */
-	private static void talleyLarge(int[] a, Counter count) {
+	private static void tallyLarge(int[] a, Counter count) {
 		for (int elem : a) {
 			if (elem > 100) {
 				count.increment();
@@ -32,11 +32,11 @@ public class NumberStats {
 		int[] myList = {10, 9, 14, 105, 88, 612, 4, 900, 777};
 
 		Counter evenCounter = new Counter();
-		talleyEvens(myList, evenCounter);
+		tallyEvens(myList, evenCounter);
 		System.out.println("Number of even numbers: " + evenCounter.get());
 
 		Counter largeCounter = new Counter();
-		talleyLarge(myList, largeCounter);
+		tallyLarge(myList, largeCounter);
 		System.out.println("Number of large numbers: " + largeCounter.get());
 		
 		System.out.println("Even counter before reset: " + evenCounter.get());
