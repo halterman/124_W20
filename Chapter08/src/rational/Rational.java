@@ -1,4 +1,4 @@
-package Rational;
+package rational;
 
 /**
  * Rational objects correspond to mathematical rational numbers.

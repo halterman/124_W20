@@ -5,6 +5,8 @@ public class RationalTest {
 	public static void main(String[] args) {
 		Rational myFract = new Rational(24, 36);
 		System.out.println("myFract = " + myFract);
+		System.out.println("Numerator: " + myFract.getNumerator() + ", " 
+				           + "denominator: " + myFract.getDenominator());
 		
 		Rational num1 = new Rational(1, 2);
 		Rational num2 = new Rational(2, 3);
