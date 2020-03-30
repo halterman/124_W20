@@ -1,35 +1,32 @@
+package countedSortingInterface;
 /**
  * A foolproof counting object
  */
-public class LimitingCounter {
-	private int count;
-	private final int limit;
+public class Counter implements CounterType {
+	protected int count;
 	
 	/**
 	 * Creates a counter object and
 	 * initializes so it ready to begin
 	 * counting
-	 * @param limit specifies the maximum value
-	 *        this counter can attain
 	 */
-	public LimitingCounter(int limit) {
+	public Counter() {
 		count = 0;
-		this.limit = limit;
 	}
 	
 	/**
 	 * Increments the counter by one
 	 */
+	@Override
 	public void increment() {
-		if (count < limit) {
-			count++;
-		}
+		count++;
 	}
 	
 	/**
 	 * Reveal the current count
 	 * @return the counter's current value
 	 */
+	@Override
 	public int get() {
 		return count;
 	}
@@ -37,15 +34,9 @@ public class LimitingCounter {
 	/**
 	 * Resets the counter to zero
 	 */
+	@Override
 	public void reset() {
 		count = 0;
-	}
-	
-	/**
-	 * Returns a string representation for this counter
-	 */
-	public String toString() {
-		return Integer.toString(count);
 	}
 
 }

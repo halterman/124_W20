@@ -1,8 +1,9 @@
+package countedSortingInterface;
+
 /**
  * A foolproof counting object
  */
-public class LimitingCounter {
-	private int count;
+public class LimitingCounter extends Counter {
 	private final int limit;
 	
 	/**
@@ -13,13 +14,13 @@ public class LimitingCounter {
 	 *        this counter can attain
 	 */
 	public LimitingCounter(int limit) {
-		count = 0;
 		this.limit = limit;
 	}
 	
 	/**
 	 * Increments the counter by one
 	 */
+	@Override
 	public void increment() {
 		if (count < limit) {
 			count++;
@@ -27,25 +28,12 @@ public class LimitingCounter {
 	}
 	
 	/**
-	 * Reveal the current count
-	 * @return the counter's current value
-	 */
-	public int get() {
-		return count;
-	}
-	
-	/**
-	 * Resets the counter to zero
-	 */
-	public void reset() {
-		count = 0;
-	}
-	
-	/**
 	 * Returns a string representation for this counter
 	 */
+	@Override
 	public String toString() {
 		return Integer.toString(count);
 	}
 
 }
+

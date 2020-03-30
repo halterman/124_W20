@@ -1,29 +1,24 @@
+package countedSorting;
 /**
  * A foolproof counting object
  */
-public class LimitingCounter {
+public class Counter {
 	private int count;
-	private final int limit;
 	
 	/**
 	 * Creates a counter object and
 	 * initializes so it ready to begin
 	 * counting
-	 * @param limit specifies the maximum value
-	 *        this counter can attain
 	 */
-	public LimitingCounter(int limit) {
+	public Counter() {
 		count = 0;
-		this.limit = limit;
 	}
 	
 	/**
 	 * Increments the counter by one
 	 */
 	public void increment() {
-		if (count < limit) {
-			count++;
-		}
+		count++;
 	}
 	
 	/**
@@ -39,13 +34,6 @@ public class LimitingCounter {
 	 */
 	public void reset() {
 		count = 0;
-	}
-	
-	/**
-	 * Returns a string representation for this counter
-	 */
-	public String toString() {
-		return Integer.toString(count);
 	}
 
 }
